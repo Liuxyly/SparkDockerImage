@@ -22,9 +22,9 @@ RUN mkdir -p /opt && \
     echo Spark ${spark_ver} installed in /opt
 
 # Add the GCS connector.
-RUN cd /opt/spark/lib && \
-    curl -O https://storage.googleapis.com/hadoop-lib/gcs/gcs-connector-latest-hadoop2.jar
-# ADD gcs-connector-latest-hadoop2.jar /opt/spark/lib
+# RUN cd /opt/spark/lib && \
+#   curl -O https://storage.googleapis.com/hadoop-lib/gcs/gcs-connector-latest-hadoop2.jar
+ADD gcs-connector-latest-hadoop2.jar /opt/spark/lib
 
 # if numpy is installed on a driver it needs to be installed on all
 # workers, so install it everywhere
