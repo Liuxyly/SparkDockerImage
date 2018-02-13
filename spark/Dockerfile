@@ -23,7 +23,7 @@ RUN mkdir -p /opt && \
 
 # Add the GCS connector.
 RUN cd /opt/spark/lib && \
-    curl -O http://central.maven.org/maven2/com/google/cloud/bigdataoss/gcs-connector/1.5.5-hadoop2/gcs-connector-1.5.5-hadoop2.jar
+    curl -O https://storage.googleapis.com/hadoop-lib/gcs/gcs-connector-latest-hadoop2.jar
 # ADD gcs-connector-latest-hadoop2.jar /opt/spark/lib
 
 # if numpy is installed on a driver it needs to be installed on all
