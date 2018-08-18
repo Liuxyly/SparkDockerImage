@@ -17,6 +17,7 @@ RUN mkdir -p /opt && \
 # Get Spark from US Apache mirror.
 RUN mkdir -p /opt && \
     cd /opt && \
+    echo http://www.us.apache.org/dist/spark/spark-${spark_ver}/spark-${spark_ver}-bin-hadoop${hadoop_sub_ver}}.tgz \
     curl http://www.us.apache.org/dist/spark/spark-${spark_ver}/spark-${spark_ver}-bin-hadoop${hadoop_sub_ver}}.tgz | \
         tar -zx && \
     ln -s spark-${spark_ver}-bin-hadoop${hadoop_sub_ver}} spark && \
